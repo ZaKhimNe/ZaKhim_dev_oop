@@ -2,18 +2,18 @@
 
 using namespace std;
 
-
+//1. Cau truc ngay
 struct date{
     int ngay;
     int thang;
     int nam;
 };
-//1. Kiem tra nam nhuan
+//2. Kiem tra nam nhuan
 bool isLeapYear(int n){
     return (n%4 == 0 && n%100 != 0 || n%400 == 0);
 }
 
-//2. So ngay trong thang
+//3. So ngay trong thang
 int DayinMonth(int month, int year){
     switch (month){
     case 1: case 3: case 5: case 7: case 8: case 10: case 12: return 31;
@@ -22,7 +22,7 @@ int DayinMonth(int month, int year){
     }
 }
 
-//3. Ham cong ngay voi mot so
+//4. Ham cong ngay voi mot so
 date DaCongNgay(date current, int n){
     date saukhicong = current;
     saukhicong.ngay += n;
@@ -38,7 +38,7 @@ date DaCongNgay(date current, int n){
 
 
 }
-
+//5. Chay Chuong trinh
 int main()
 {
     date today;
